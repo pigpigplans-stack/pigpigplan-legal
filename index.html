@@ -947,9 +947,30 @@ I18N["es"].guide=`<h2>Guía de uso de PigPigPlan</h2>
 <ul><li>Salud → revoca en cualquier momento en la app Salud → «Acceso a datos y dispositivos».</li><li>Fotos → Ajustes → Privacidad y seguridad → Fotos.</li><li>Micrófono / reconocimiento de voz → Ajustes → Privacidad y seguridad.</li><li>Eliminar la app → se borran todos los datos locales (exporta antes si lo necesitas).</li></ul>
 <p><strong>Ejemplos:</strong></p>
 <ul><li>Revocar Fotos en Ajustes → la cuadrícula del álbum ya no lee fotos nuevas.</li><li>Eliminar la app → base de datos local borrada; la app se reinicia.</li></ul>`;
+// URL 参数：?lang=en / ?tab=guide（App 打开隐私政策时会按当前语言带上 lang，网页直接切到该语言）
+function param(k){var m=new RegExp("[?&]"+k+"=([^&#]*)").exec(location.search||"");return m?decodeURIComponent(m[1].replace(/\+/g," ")):null}
+// 语言码归一：zh-Hans / zh-Hans-CN / zh-CN → zh-Hans；zh-TW / zh-Hant → zh-Hant；en-US → en
+function normLang(q){
+  if(!q)return null;
+  if(I18N[q])return q;
+  var s=String(q).toLowerCase();
+  if(s.indexOf("zh")===0){
+    if(s.indexOf("hant")>=0||s.indexOf("tw")>=0||s.indexOf("hk")>=0||s.indexOf("mo")>=0)return "zh-Hant";
+    return "zh-Hans";
+  }
+  var base=s.split("-")[0];
+  return I18N[base]?base:null;
+}
 var cur="en";
-try{var s=localStorage.getItem("ppLang");if(s&&I18N[s])cur=s}catch(e){}
+try{
+  var q=normLang(param("lang")||param("l"));        // ① URL 指定语言（最高优先）
+  if(q){cur=q}
+  else{var s=localStorage.getItem("ppLang");if(s&&I18N[s])cur=s}   // ② 记住上次选择
+}catch(e){}
 var tab="privacy";
+try{if(param("tab")==="guide")tab="guide"}catch(e){}
+// 把当前语言/页签同步进地址栏（刷新或分享时保留）
+function syncURL(){try{history.replaceState(null,"","?lang="+encodeURIComponent(cur)+(tab==="privacy"?"":"&tab="+tab))}catch(e){}}
 function el(id){return document.getElementById(id)}
 function draw(){
   document.documentElement.lang=cur;
@@ -958,8 +979,9 @@ function draw(){
   el("tabs").innerHTML='<button class="tab'+(tab==="privacy"?" active":"")+'" data-t="privacy">'+d.ui.privacy+'</button><button class="tab'+(tab==="guide"?" active":"")+'" data-t="guide">'+d.ui.guide+'</button>';
   el("doc").innerHTML=(tab==="privacy")?d.privacy:d.guide;
   if(d.contact){el("footContact").textContent=d.contact}
-  Array.prototype.forEach.call(document.querySelectorAll(".lang"),function(b){b.onclick=function(){cur=b.getAttribute("data-l");try{localStorage.setItem("ppLang",cur)}catch(e){}draw()}});
-  Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(b){b.onclick=function(){tab=b.getAttribute("data-t");draw()}});
+  Array.prototype.forEach.call(document.querySelectorAll(".lang"),function(b){b.onclick=function(){cur=b.getAttribute("data-l");try{localStorage.setItem("ppLang",cur)}catch(e){}syncURL();draw()}});
+  Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(b){b.onclick=function(){tab=b.getAttribute("data-t");syncURL();draw()}});
+  syncURL();
 }
 window.addEventListener("DOMContentLoaded",draw);
 </script>
