@@ -53,7 +53,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;paddin
 var LANGS=[["en","English","en"],["zh-Hans","简体中文","zh-Hans"],["zh-Hant","繁體中文","zh-Hant"],["ja","日本語","ja"],["ko","한국어","ko"],["de","Deutsch","de"],["fr","Français","fr"],["es","Español","es"]];
 var I18N={};
 /* EN */
-I18N["en"]={ui:{privacy:"Privacy Policy",guide:"User Guide"},contact:"Contact: pigpigplans@gmail.com"};
+I18N["en"]={ui:{privacy:"Privacy Policy",guide:"User Guide",terms:"Terms & Disclaimer"},contact:"Contact: pigpigplans@gmail.com"};
 I18N["en"].privacy=`<h2>PigPigPlan Privacy Policy</h2>
 <p class="meta">Effective Date: September 2026 · Platforms: iOS / iPadOS / macOS · Version: v1.1</p>
 <div class="callout"><strong>Core commitment.</strong> PigPigPlan is a privacy-first, local-first finance &amp; personal data app. All data you create (including health data) stays on your device and is never uploaded to any server; exports are always initiated by you.</div>
@@ -169,7 +169,7 @@ I18N["en"].guide=`<h2>PigPigPlan User Guide</h2>
 <ul><li>Revoke Photos in Settings → the album grid can no longer read new photos.</li><li>Delete the app → local database gone; the app is reset.</li></ul>`;
 /* EN */
 I18N["zh-Hans"]={
- ui:{privacy:"隐私政策",guide:"操作说明"},
+ ui:{privacy:"隐私政策",guide:"操作说明",terms:"使用条款与免责声明"},
  contact:"联系：pigpigplans@gmail.com",
  privacy:`<h2>PigPigPlan 隐私政策</h2>
 <p class="meta">生效日期：2026 年 9 月 · 平台：iOS / iPadOS / macOS · 版本：v1.1</p>
@@ -275,7 +275,7 @@ I18N["zh-Hans"]={
 <p><strong>示例：</strong></p>
 <ul><li>在设置中撤销「照片」→ 相册网格不再能读取新照片。</li><li>删除 App → 本机数据库消失；App 恢复初始状态。</li></ul>`
 };
-I18N["zh-Hant"]={ui:{privacy:"隱私權政策",guide:"操作說明"},contact:"聯絡：pigpigplans@gmail.com"};
+I18N["zh-Hant"]={ui:{privacy:"隱私權政策",guide:"操作說明",terms:"使用條款與免責聲明"},contact:"聯絡：pigpigplans@gmail.com"};
 I18N["zh-Hant"].privacy=`<h2>PigPigPlan 隱私權政策</h2>
 <p class="meta">生效日期：2026 年 9 月 · 平台：iOS / iPadOS / macOS · 版本：v1.1</p>
 <div class="callout"><strong>核心承諾。</strong>PigPigPlan 是一款本地優先的記帳與個人資料管理 App。你在 App 中產生的所有資料（包含健康資料）只儲存在你的裝置本地，絕不上傳任何伺服器；匯出資料完全由你自主決定。</div>
@@ -390,7 +390,7 @@ I18N["zh-Hant"].guide=`<h2>PigPigPlan 操作說明</h2>
 <p><strong>示例：</strong></p>
 <ul><li>在設定中撤銷「照片」→ 相簿格狀檢視不再能讀取新照片。</li><li>刪除 App → 本機資料庫消失；App 恢復初始狀態。</li></ul>`;
 /* ZH_HANT */
-I18N["ja"]={ui:{privacy:"プライバシーポリシー",guide:"操作ガイド"},contact:"お問い合わせ：pigpigplans@gmail.com"};
+I18N["ja"]={ui:{privacy:"プライバシーポリシー",guide:"操作ガイド",terms:"利用規約と免責事項"},contact:"お問い合わせ：pigpigplans@gmail.com"};
 I18N["ja"].privacy=`<h2>PigPigPlan プライバシーポリシー</h2>
 <p class="meta">発効日：2026年9月 · 対応：iOS / iPadOS / macOS · 版：v1.1</p>
 <div class="callout"><strong>基本方針。</strong>PigPigPlan はローカル優先の家計簿・個人データ管理アプリです。アプリ内で作成されたすべてのデータ（健康データを含む）はお客様のデバイス内にのみ保存され、サーバーにアップロードされることはありません。エクスポートは常にユーザー自身が開始・管理します。</div>
@@ -505,7 +505,7 @@ I18N["ja"].guide=`<h2>PigPigPlan 操作ガイド</h2>
 <p><strong>例：</strong></p>
 <ul><li>設定で「写真」を取り消し → アルバムのグリッドは新しい写真を読み取れなくなる。</li><li>アプリを削除 → 端末内データベースが消え、アプリは初期状態に戻る。</li></ul>`;
 /* JA */
-I18N["ko"]={ui:{privacy:"개인정보 처리방침",guide:"사용 안내"},contact:"문의: pigpigplans@gmail.com"};
+I18N["ko"]={ui:{privacy:"개인정보 처리방침",guide:"사용 안내",terms:"이용약관 및 면책조항"},contact:"문의: pigpigplans@gmail.com"};
 I18N["ko"].privacy=`<h2>PigPigPlan 개인정보 처리방침</h2>
 <p class="meta">시행일: 2026년 9월 · 플랫폼: iOS / iPadOS / macOS · 버전: v1.1</p>
 <div class="callout"><strong>핵심 약속.</strong> PigPigPlan은 로컬 우선(local-first) 방식의 가계부·개인 데이터 관리 앱입니다. 앱에서 생성하는 모든 데이터(건강 데이터 포함)는 사용자 기기에만 저장되며 어떤 서버에도 업로드되지 않습니다. 내보내기는 항상 사용자가 직접 시작합니다.</div>
@@ -615,7 +615,7 @@ I18N["ko"].guide=`<h2>PigPigPlan 사용 안내</h2>
 <ul><li>건강 → 언제든 건강 앱 → 「데이터 접근 및 기기」에서 철회.</li><li>사진 → 설정 → 개인정보 보호 및 보안 → 사진에서 철회.</li><li>마이크 / 음성 인식 → 설정 → 개인정보 보호 및 보안에서 철회.</li><li>앱 삭제 → 모든 기기 내 데이터가 삭제됩니다(필요하면 먼저 내보내기).</li></ul>
 <p><strong>예시:</strong></p>
 <ul><li>설정에서 「사진」을 철회 → 앨범 그리드가 새 사진을 읽을 수 없게 됨.</li><li>앱 삭제 → 기기 내 데이터베이스가 사라지고 앱이 초기 상태로 돌아감.</li></ul>`;
-I18N["de"]={ui:{privacy:"Datenschutz",guide:"Anleitung"},contact:"Kontakt: pigpigplans@gmail.com"};
+I18N["de"]={ui:{privacy:"Datenschutz",guide:"Anleitung",terms:"Nutzungsbedingungen"},contact:"Kontakt: pigpigplans@gmail.com"};
 I18N["de"].privacy=`<h2>Datenschutzrichtlinie von PigPigPlan</h2>
 <p class="meta">Gültig ab: September 2026 · Plattformen: iOS / iPadOS / macOS · Version: v1.1</p>
 <div class="callout"><strong>Kernversprechen.</strong> PigPigPlan ist eine lokale, datenschutzorientierte App für Finanzen und persönliche Datenverwaltung. Alle in der App erstellten Daten (einschließlich Gesundheitsdaten) werden ausschließlich auf Ihrem Gerät gespeichert und niemals auf einen Server hochgeladen. Exporte lösen immer Sie selbst aus.</div>
@@ -725,7 +725,7 @@ I18N["de"].guide=`<h2>PigPigPlan Anleitung</h2>
 <ul><li>Gesundheit → jederzeit in der Health-App unter „Datenzugriff &amp; Geräte“ widerrufen.</li><li>Fotos → Einstellungen → Datenschutz &amp; Sicherheit → Fotos widerrufen.</li><li>Mikrofon / Spracherkennung → in Einstellungen → Datenschutz &amp; Sicherheit widerrufen.</li><li>App löschen → alle lokalen Daten werden entfernt (vorher exportieren).</li></ul>
 <p><strong>Beispiele:</strong></p>
 <ul><li>Fotos in den Einstellungen widerrufen → das Album-Raster kann keine neuen Fotos mehr lesen.</li><li>Die App löschen → lokale Datenbank weg; die App ist zurückgesetzt.</li></ul>`;
-I18N["fr"]={ui:{privacy:"Confidentialité",guide:"Guide"},contact:"Contact : pigpigplans@gmail.com"};
+I18N["fr"]={ui:{privacy:"Confidentialité",guide:"Guide",terms:"Conditions et avertissement"},contact:"Contact : pigpigplans@gmail.com"};
 I18N["fr"].privacy=`<h2>Politique de confidentialité de PigPigPlan</h2>
 <p class="meta">Date d'effet : septembre 2026 · Plateformes : iOS / iPadOS / macOS · Version : v1.1</p>
 <div class="callout"><strong>Engagement principal.</strong> PigPigPlan est une application locale et respectueuse de la vie privée pour la gestion des finances et des données personnelles. Toutes les données que vous créez dans l'application (y compris les données de santé) sont stockées uniquement sur votre appareil, ne sont jamais téléchargées sur un serveur, et l'exportation est toujours initiée et contrôlée par vous.</div>
@@ -837,7 +837,7 @@ I18N["fr"].guide=`<h2>Guide d'utilisation de PigPigPlan</h2>
 <ul><li>Révoquer Photos dans Réglages → la grille d'album ne lit plus de nouvelles photos.</li><li>Supprimer l'app → base locale effacée ; l'app est réinitialisée.</li></ul>`;
 /* FR_DONE */
 /* ES */
-I18N["es"]={ui:{privacy:"Privacidad",guide:"Guía"},contact:"Contacto: pigpigplans@gmail.com"};
+I18N["es"]={ui:{privacy:"Privacidad",guide:"Guía",terms:"Términos y descargo"},contact:"Contacto: pigpigplans@gmail.com"};
 I18N["es"].privacy=`<h2>Política de privacidad de PigPigPlan</h2>
 <p class="meta">Fecha de entrada en vigor: septiembre de 2026 · Plataformas: iOS / iPadOS / macOS · Versión: v1.1</p>
 <div class="callout"><strong>Compromiso principal.</strong> PigPigPlan es una aplicación local y centrada en la privacidad para la gestión de finanzas y datos personales. Todos los datos que creas en la aplicación (incluidos los datos de salud) se almacenan únicamente en tu dispositivo, nunca se suben a ningún servidor, y la exportación siempre la inicias y controlas tú.</div>
@@ -947,7 +947,207 @@ I18N["es"].guide=`<h2>Guía de uso de PigPigPlan</h2>
 <ul><li>Salud → revoca en cualquier momento en la app Salud → «Acceso a datos y dispositivos».</li><li>Fotos → Ajustes → Privacidad y seguridad → Fotos.</li><li>Micrófono / reconocimiento de voz → Ajustes → Privacidad y seguridad.</li><li>Eliminar la app → se borran todos los datos locales (exporta antes si lo necesitas).</li></ul>
 <p><strong>Ejemplos:</strong></p>
 <ul><li>Revocar Fotos en Ajustes → la cuadrícula del álbum ya no lee fotos nuevas.</li><li>Eliminar la app → base de datos local borrada; la app se reinicia.</li></ul>`;
-// URL 参数：?lang=en / ?tab=guide（App 打开隐私政策时会按当前语言带上 lang，网页直接切到该语言）
+I18N["en"].terms=`<h2>Terms of Use &amp; Disclaimer</h2>
+<p class="meta">Effective date: 2026-10-08. Please read carefully before using the app.</p>
+<h3>1. Acceptance of these terms</h3>
+<p>By downloading, opening or using PigPigPlan (the &ldquo;App&rdquo;) you agree to these Terms of Use &amp; Disclaimer. If you do not agree, please do not use the App.</p>
+<h3>2. Nature of the service</h3>
+<p>The App is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;. We do not warrant that it will be error-free, uninterrupted, or that any result will be accurate or suitable for your particular situation.</p>
+<h3>3. AI and data-inference results (reference only)</h3>
+<p>Some features produce results by on-device AI models or statistical inference &mdash; for example outfit suggestions, sleep and health advice, stress scores, trends and summaries derived from your data. These results:</p>
+<ul><li>are <strong>for reference only</strong> and are <strong>not a professional diagnosis, prescription or recommendation</strong>;</li><li>may be <strong>inaccurate, incomplete or biased</strong>, and may not apply to your personal circumstances (allergies, medical history, individual needs);</li><li>should be evaluated by you before you act on them; <strong>you use them at your own risk</strong>.</li></ul>
+<h3>4. No professional advice</h3>
+<p>The App does not provide medical, legal, investment, tax or other professional advice. Always consult a qualified professional for such matters.</p>
+<h3>5. Health</h3>
+<p>Health-related content is not intended to diagnose, treat, cure or prevent any disease and is not a substitute for a doctor. Health data is read from Apple Health with your permission; its accuracy is governed by Apple and the source devices. In an emergency, seek medical help immediately.</p>
+<h3>6. Weather and routes (traffic)</h3>
+<p>Weather data comes from third parties (Open-Meteo) and route/ETA data from Apple Maps. Forecasts and ETAs are estimates and may differ from reality. Traffic conditions change constantly; <strong>you are responsible for your own travel safety</strong> and must always follow traffic rules and your own judgement.</p>
+<h3>7. Finance</h3>
+<p>Finance features are bookkeeping tools only. They do not constitute investment, tax or accounting advice. You are responsible for the accuracy of the data you enter or import.</p>
+<h3>8. Subscriptions and refunds</h3>
+<p>Paid features are sold as auto-renewable subscriptions through Apple. Charges are collected by Apple, renew automatically unless cancelled at least 24 hours before the end of the current period, and can be managed in your Apple account. <strong>Refunds are handled solely by Apple</strong>; we cannot issue refunds.</p>
+<h3>9. Limitation of liability</h3>
+<p>To the maximum extent permitted by applicable law, we are not liable for any indirect, incidental or consequential loss, or for any decision or action taken in reliance on the App or its results. Nothing in these terms excludes liability that cannot be excluded by law.</p>
+<h3>10. Changes</h3>
+<p>We may update these terms. Continued use after an update means you accept the updated terms. Material changes will be shown in the App.</p>
+<h3>11. Contact</h3>
+<p>Questions about these terms: pigpigplans@gmail.com</p>`;
+I18N["zh-Hans"].terms=`<h2>使用条款与免责声明</h2>
+<p class="meta">生效日期：2026-10-08。使用本 App 前请仔细阅读。</p>
+<h3>1. 条款的接受</h3>
+<p>下载、打开或使用 PigPigPlan（下称「本 App」）即表示你同意本《使用条款与免责声明》。如不同意，请勿使用本 App。</p>
+<h3>2. 服务性质</h3>
+<p>本 App 按「现状」与「现有可用性」提供。我们不保证其无错误、不中断，也不保证任何结果准确或适用于你的具体情况。</p>
+<h3>3. AI 与数据分析结果（仅供参考）</h3>
+<p>部分功能由本机 AI 模型或统计推断产生结果，例如穿搭推荐、睡眠与健康建议、压力评分，以及基于你数据的趋势与摘要。这些结果：</p>
+<ul><li><strong>仅供参考</strong>，<strong>不是专业诊断、处方或推荐</strong>；</li><li>可能<strong>不准确、不完整或有偏差</strong>，也可能不适用于你的个人情况（过敏、病史、个体差异）；</li><li>需由你自行判断后再采用，<strong>使用后果由你自负</strong>。</li></ul>
+<h3>4. 不构成专业建议</h3>
+<p>本 App 不提供医疗、法律、投资、税务等专业意见。此类事项请咨询具备资质的专业人士。</p>
+<h3>5. 健康</h3>
+<p>与健康相关的内容不用于诊断、治疗、治愈或预防任何疾病，也不能替代医生。健康数据经你授权后从 Apple 健康读取，其准确性由 Apple 与来源设备决定。如遇紧急情况，请立即就医。</p>
+<h3>6. 天气与路线（交通）</h3>
+<p>天气数据来自第三方（Open-Meteo），路线与预计到达时间来自 Apple 地图。预测与预计到达时间均为估算，可能与实际不符；路况随时变化，<strong>出行安全由你自行负责</strong>，请始终遵守交通规则并自行判断。</p>
+<h3>7. 财务</h3>
+<p>财务功能仅为记账工具，不构成投资、税务或会计建议。你录入或导入数据的准确性由你负责。</p>
+<h3>8. 订阅与退款</h3>
+<p>付费功能通过 Apple 以自动续费订阅形式销售。费用由 Apple 收取；除非在当前周期结束前至少 24 小时取消，否则将自动续费，并可在你的 Apple 账户中管理。<strong>退款仅由 Apple 处理</strong>，我们无法退款。</p>
+<h3>9. 责任限制</h3>
+<p>在法律允许的最大范围内，我们不对任何间接、附带或后果性损失，也不对因依赖本 App 或其结果而作出的任何决定或行动承担责任。本条款不排除依法不得排除的责任。</p>
+<h3>10. 条款变更</h3>
+<p>我们可能更新本条款。更新后继续使用即视为你接受更新后的条款；重大变更会在 App 内提示。</p>
+<h3>11. 联系方式</h3>
+<p>有关本条款的疑问：pigpigplans@gmail.com</p>`;
+I18N["zh-Hant"].terms=`<h2>使用條款與免責聲明</h2>
+<p class="meta">生效日期：2026-10-08。使用本 App 前請仔細閱讀。</p>
+<h3>1. 條款的接受</h3>
+<p>下載、開啟或使用 PigPigPlan（下稱「本 App」）即表示你同意本《使用條款與免責聲明》。如不同意，請勿使用本 App。</p>
+<h3>2. 服務性質</h3>
+<p>本 App 依「現狀」與「現有可用性」提供。我們不保證其無錯誤、不中斷，也不保證任何結果準確或適用於你的具體情況。</p>
+<h3>3. AI 與資料分析結果（僅供參考）</h3>
+<p>部分功能由本機 AI 模型或統計推斷產生結果，例如穿搭建議、睡眠與健康建議、壓力評分，以及基於你資料的趨勢與摘要。這些結果：</p>
+<ul><li><strong>僅供參考</strong>，<strong>不是專業診斷、處方或推薦</strong>；</li><li>可能<strong>不準確、不完整或有偏差</strong>，也可能不適用於你的個人情況（過敏、病史、個體差異）；</li><li>需由你自行判斷後再採用，<strong>使用後果由你自負</strong>。</li></ul>
+<h3>4. 不構成專業建議</h3>
+<p>本 App 不提供醫療、法律、投資、稅務等專業意見。此類事項請諮詢具備資格的專業人士。</p>
+<h3>5. 健康</h3>
+<p>與健康相關的內容不用於診斷、治療、治癒或預防任何疾病，也不能替代醫生。健康資料經你授權後從 Apple 健康讀取，其準確性由 Apple 與來源裝置決定。如遇緊急情況，請立即就醫。</p>
+<h3>6. 天氣與路線（交通）</h3>
+<p>天氣資料來自第三方（Open-Meteo），路線與預計到達時間來自 Apple 地圖。預測與預計到達時間均為估算，可能與實際不符；路況隨時變化，<strong>出行安全由你自行負責</strong>，請始終遵守交通規則並自行判斷。</p>
+<h3>7. 財務</h3>
+<p>財務功能僅為記帳工具，不構成投資、稅務或會計建議。你輸入或匯入資料的準確性由你負責。</p>
+<h3>8. 訂閱與退款</h3>
+<p>付費功能透過 Apple 以自動續訂訂閱形式銷售。費用由 Apple 收取；除非在目前週期結束前至少 24 小時取消，否則將自動續訂，並可在你的 Apple 帳戶中管理。<strong>退款僅由 Apple 處理</strong>，我們無法退款。</p>
+<h3>9. 責任限制</h3>
+<p>在法律允許的最大範圍內，我們不對任何間接、附帶或後果性損失，也不對因依賴本 App 或其結果而作出的任何決定或行動承擔責任。本條款不排除依法不得排除的責任。</p>
+<h3>10. 條款變更</h3>
+<p>我們可能更新本條款。更新後繼續使用即視為你接受更新後的條款；重大變更會在 App 內提示。</p>
+<h3>11. 聯絡方式</h3>
+<p>有關本條款的疑問：pigpigplans@gmail.com</p>`;
+I18N["ja"].terms=`<h2>利用規約および免責事項</h2>
+<p class="meta">発効日：2026-10-08。本アプリを使用する前に必ずお読みください。</p>
+<h3>1. 本規約への同意</h3>
+<p>PigPigPlan（以下「本アプリ」）をダウンロード、起動または使用することで、本「利用規約および免責事項」に同意したものとみなします。同意できない場合は本アプリを使用しないでください。</p>
+<h3>2. サービスの性質</h3>
+<p>本アプリは「現状有姿」かつ「提供可能な範囲」で提供されます。エラーがないこと、中断しないこと、また結果が正確であることやお客様の個別事情に適合することを保証しません。</p>
+<h3>3. AI・データ推論の結果（参考情報）</h3>
+<p>一部の機能は端末内の AI モデルまたは統計的推論により結果を生成します（例：コーデ提案、睡眠・健康の助言、ストレススコア、データから導く傾向と要約）。これらの結果は：</p>
+<ul><li><strong>参考情報であり</strong>、<strong>専門的な診断・処方・推奨ではありません</strong>；</li><li><strong>不正確・不完全・偏りがある可能性</strong>があり、アレルギー・既往歴・体質などの個別事情に適合しないことがあります；</li><li>ご自身で判断したうえでご利用いただき、<strong>利用の結果はご自身の責任</strong>となります。</li></ul>
+<h3>4. 専門的助言ではありません</h3>
+<p>本アプリは医療・法律・投資・税務などの専門的助言を提供しません。これらについては有資格の専門家にご相談ください。</p>
+<h3>5. 健康</h3>
+<p>健康関連の内容は、疾病の診断・治療・治癒・予防を目的とするものではなく、医師の代替にもなりません。健康データは許可を得て Apple ヘルスケアから読み取り、その正確性は Apple および取得元のデバイスに依存します。緊急時は直ちに医療機関へ連絡してください。</p>
+<h3>6. 天気とルート（交通）</h3>
+<p>天気データは第三者（Open-Meteo）、ルートと所要時間は Apple マップに由来します。予測と所要時間は推定であり実際と異なることがあります。交通状況は常に変化するため、<strong>移動の安全はご自身の責任</strong>であり、常に交通規則に従い自己の判断で行動してください。</p>
+<h3>7. 家計</h3>
+<p>家計機能は記帳ツールであり、投資・税務・会計の助言には該当しません。入力または取り込んだデータの正確性はご自身の責任です。</p>
+<h3>8. サブスクリプションと返金</h3>
+<p>有料機能は Apple を通じた自動更新サブスクリプションとして販売されます。料金は Apple が徴収し、現在の期間終了の 24 時間前までに解約しない限り自動更新され、Apple アカウントで管理できます。<strong>返金は Apple のみが対応</strong>し、当方は返金できません。</p>
+<h3>9. 責任の制限</h3>
+<p>適用法の許す最大限の範囲で、当方は間接的・付随的・結果的損害、または本アプリやその結果を信頼して行った決定・行為について責任を負いません。本規約は法律上排除できない責任を排除しません。</p>
+<h3>10. 規約の変更</h3>
+<p>本規約を更新することがあります。更新後も継続して使用した場合、更新後の規約に同意したものとみなします。重要な変更はアプリ内で通知します。</p>
+<h3>11. お問い合わせ</h3>
+<p>本規約に関するご質問：pigpigplans@gmail.com</p>`;
+I18N["ko"].terms=`<h2>이용약관 및 면책조항</h2>
+<p class="meta">시행일: 2026-10-08. 앱을 사용하기 전에 주의 깊게 읽어 주세요.</p>
+<h3>1. 약관의 동의</h3>
+<p>PigPigPlan(이하 “앱”)을 다운로드, 실행 또는 사용하면 본 「이용약관 및 면책조항」에 동의한 것으로 봅니다. 동의하지 않으면 앱을 사용하지 마세요.</p>
+<h3>2. 서비스의 성격</h3>
+<p>앱은 “있는 그대로” 그리고 “제공 가능한 범위 내”로 제공됩니다. 오류가 없거나 중단되지 않는다는 것, 또는 결과가 정확하거나 이용자의 개별 상황에 적합하다는 것을 보증하지 않습니다.</p>
+<h3>3. AI 및 데이터 추론 결과(참고용)</h3>
+<p>일부 기능은 기기 내 AI 모델 또는 통계적 추론으로 결과를 생성합니다(예: 코디 추천, 수면·건강 조언, 스트레스 점수, 데이터 기반 추세와 요약). 이러한 결과는:</p>
+<ul><li><strong>참고용이며</strong> <strong>전문적인 진단·처방·권고가 아닙니다</strong>;</li><li><strong>부정확·불완전·편향될 수 있고</strong> 알레르기, 병력, 체질 등 개별 상황에 맞지 않을 수 있습니다;</li><li>스스로 판단한 뒤 사용해야 하며 <strong>사용 결과는 본인 책임</strong>입니다.</li></ul>
+<h3>4. 전문적 조언이 아닙니다</h3>
+<p>앱은 의료·법률·투자·세무 등 전문적 조언을 제공하지 않습니다. 해당 사항은 자격을 갖춘 전문가와 상담하세요.</p>
+<h3>5. 건강</h3>
+<p>건강 관련 내용은 질병의 진단·치료·완치·예방을 목적으로 하지 않으며 의사를 대체하지 않습니다. 건강 데이터는 허가를 받아 Apple 건강에서 읽으며 그 정확성은 Apple과 원본 기기에 따릅니다. 응급 상황에서는 즉시 의료기관의 도움을 받으세요.</p>
+<h3>6. 날씨와 경로(교통)</h3>
+<p>날씨 데이터는 제3자(Open-Meteo), 경로와 소요 시간은 Apple 지도에서 제공됩니다. 예측과 소요 시간은 추정치이므로 실제와 다를 수 있습니다. 교통 상황은 항상 변하므로 <strong>이동 안전은 본인 책임</strong>이며 항상 교통 법규와 스스로의 판단을 따르세요.</p>
+<h3>7. 가계부</h3>
+<p>가계부 기능은 기록 도구일 뿐 투자·세무·회계 조언이 아닙니다. 입력하거나 가져온 데이터의 정확성은 본인 책임입니다.</p>
+<h3>8. 구독과 환불</h3>
+<p>유료 기능은 Apple을 통한 자동 갱신 구독으로 판매됩니다. 요금은 Apple이 징수하며 현재 기간 종료 24시간 전까지 해지하지 않으면 자동 갱신되고 Apple 계정에서 관리할 수 있습니다. <strong>환불은 Apple만 처리</strong>하며 당사는 환불할 수 없습니다.</p>
+<h3>9. 책임의 제한</h3>
+<p>적용 법률이 허용하는 최대 범위에서 당사는 간접적·부수적·결과적 손실, 또는 앱이나 그 결과에 의존하여 내린 결정이나 행동에 대해 책임지지 않습니다. 본 약관은 법률상 배제할 수 없는 책임을 배제하지 않습니다.</p>
+<h3>10. 약관의 변경</h3>
+<p>본 약관을 갱신할 수 있습니다. 갱신 후 계속 사용하면 갱신된 약관에 동의한 것으로 봅니다. 중요한 변경은 앱 내에서 안내합니다.</p>
+<h3>11. 문의</h3>
+<p>본 약관 관련 문의: pigpigplans@gmail.com</p>`;
+I18N["de"].terms=`<h2>Nutzungsbedingungen und Haftungsausschluss</h2>
+<p class="meta">Datum des Inkrafttretens: 2026-10-08. Bitte vor der Nutzung der App sorgfältig lesen.</p>
+<h3>1. Zustimmung zu diesen Bedingungen</h3>
+<p>Mit dem Herunterladen, Öffnen oder Verwenden von PigPigPlan (die „App“) akzeptieren Sie diese Nutzungsbedingungen und diesen Haftungsausschluss.</p>
+<h3>2. Art des Dienstes</h3>
+<p>Die App wird „wie besehen“ und „wie verfügbar“ bereitgestellt. Wir garantieren weder Fehlerfreiheit noch Unterbrechungsfreiheit noch, dass Ergebnisse korrekt oder für Ihre Situation geeignet sind.</p>
+<h3>3. KI- und Datenauswertungsergebnisse (nur zur Orientierung)</h3>
+<p>Einige Funktionen erzeugen Ergebnisse durch On-Device-KI-Modelle oder statistische Auswertung – z. B. Outfit-Vorschläge, Schlaf- und Gesundheitshinweise, Stresswerte sowie aus Ihren Daten abgeleitete Trends.</p>
+<ul><li>dienen <strong>nur zur Orientierung</strong> und sind <strong>keine professionelle Diagnose, Verordnung oder Empfehlung</strong>;</li><li>können <strong>unrichtig, unvollständig oder verzerrt</strong> sein (Allergien, Krankengeschichte, individuelle Bedürfnisse);</li><li>sind vor der Nutzung selbst zu bewerten; <strong>die Nutzung erfolgt auf eigenes Risiko</strong>.</li></ul>
+<h3>4. Keine professionelle Beratung</h3>
+<p>Die App bietet keine medizinische, rechtliche, finanzielle oder steuerliche Beratung.</p>
+<h3>5. Gesundheit</h3>
+<p>Gesundheitsinhalte sind nicht zur Diagnose, Behandlung, Heilung oder Vorbeugung bestimmt und ersetzen keinen Arzt. Daten werden mit Ihrer Erlaubnis aus Apple Health gelesen. Im Notfall sofort ärztliche Hilfe suchen.</p>
+<h3>6. Wetter und Routen (Verkehr)</h3>
+<p>Wetterdaten stammen von Dritten (Open-Meteo), Route und ETA von Apple Maps. Angaben sind Schätzungen. <strong>Die Sicherheit auf der Reise liegt in Ihrer Verantwortung</strong>.</p>
+<h3>7. Finanzen</h3>
+<p>Finanzfunktionen sind reine Buchhaltungswerkzeuge, keine Anlage-, Steuer- oder Buchhaltungsberatung.</p>
+<h3>8. Abonnements und Erstattungen</h3>
+<p>Gebühren werden von Apple eingezogen und verlängern sich automatisch, sofern nicht mindestens 24 Stunden vor Periodenende gekündigt wird. <strong>Erstattungen erfolgen ausschließlich durch Apple.</strong></p>
+<h3>9. Haftungsbeschränkung</h3>
+<p>Soweit gesetzlich zulässig, haften wir nicht für mittelbare oder Folgeschäden aus der Nutzung der App. Zwingende gesetzliche Haftung bleibt unberührt.</p>
+<h3>10. Änderungen</h3>
+<p>Wir können diese Bedingungen aktualisieren; weitere Nutzung gilt als Zustimmung.</p>
+<h3>11. Kontakt</h3>
+<p>Fragen: pigpigplans@gmail.com</p>`;
+I18N["fr"].terms=`<h2>Conditions d'utilisation et avertissement</h2>
+<p class="meta">Date d'entrée en vigueur : 2026-10-08. À lire attentivement avant utilisation.</p>
+<h3>1. Acceptation</h3>
+<p>En téléchargeant, ouvrant ou utilisant PigPigPlan (l'« App »), vous acceptez ces conditions. Si vous n'acceptez pas, n'utilisez pas l'App.</p>
+<h3>2. Nature du service</h3>
+<p>L'App est fournie « en l'état ». Nous ne garantissons ni l'absence d'erreurs ou d'interruptions, ni l'exactitude des résultats.</p>
+<h3>3. Résultats d'IA et d'inférence (indicatifs)</h3>
+<p>Certaines fonctions utilisent des modèles d'IA embarqués ou une inférence statistique (tenues, conseils sommeil/santé, scores de stress, tendances).</p>
+<ul><li><strong>à titre indicatif</strong>, <strong>sans diagnostic ni prescription professionnels</strong> ;</li><li>peuvent être <strong>inexacts ou biaisés</strong> (allergies, antécédents) ;</li><li><strong>à utiliser à vos propres risques</strong>.</li></ul>
+<h3>4. Aucun conseil professionnel</h3>
+<p>Aucun conseil médical, juridique, financier ou fiscal n'est fourni.</p>
+<h3>5. Santé</h3>
+<p>Les contenus santé ne diagnostiquent ni ne traitent aucune maladie et ne remplacent pas un médecin. Données lues depuis Apple Santé avec votre autorisation. En cas d'urgence, consultez immédiatement.</p>
+<h3>6. Météo et itinéraires (trafic)</h3>
+<p>Données météo de tiers (Open-Meteo), itinéraires d'Apple Maps. Estimations pouvant différer. <strong>Votre sécurité relève de votre responsabilité</strong>.</p>
+<h3>7. Finances</h3>
+<p>Outils de comptabilité uniquement, sans conseil en investissement ou fiscal.</p>
+<h3>8. Abonnements et remboursements</h3>
+<p>Frais perçus par Apple, renouvellement automatique sauf résiliation 24 h avant l'échéance. <strong>Remboursements traités uniquement par Apple.</strong></p>
+<h3>9. Limitation de responsabilité</h3>
+<p>Dans la mesure permise par la loi, nous déclinons toute responsabilité pour les dommages indirects ou consécutifs.</p>
+<h3>10. Modifications</h3>
+<p>Ces conditions peuvent être mises à jour ; l'usage continu vaut acceptation.</p>
+<h3>11. Contact</h3>
+<p>Questions : pigpigplans@gmail.com</p>`;
+I18N["es"].terms=`<h2>Términos de uso y descargo de responsabilidad</h2>
+<p class="meta">Fecha de entrada en vigor: 2026-10-08. Lee atentamente antes de usar la app.</p>
+<h3>1. Aceptación</h3>
+<p>Al descargar, abrir o usar PigPigPlan (la «App») aceptas estos términos. Si no estás de acuerdo, no uses la App.</p>
+<h3>2. Naturaleza del servicio</h3>
+<p>La App se ofrece «tal cual». No garantizamos ausencia de errores o interrupciones, ni que los resultados sean exactos.</p>
+<h3>3. Resultados de IA e inferencia (orientativos)</h3>
+<p>Algunas funciones usan modelos de IA en el dispositivo o inferencia estadística (ropa, consejos de sueño y salud, estrés, tendencias).</p>
+<ul><li><strong>solo orientativos</strong>, <strong>sin diagnóstico ni prescripción profesional</strong>;</li><li>pueden ser <strong>inexactos o sesgados</strong> (alergias, historial médico);</li><li><strong>se usan bajo tu propio riesgo</strong>.</li></ul>
+<h3>4. No constituye asesoramiento profesional</h3>
+<p>No ofrece asesoramiento médico, legal, de inversión ni fiscal.</p>
+<h3>5. Salud</h3>
+<p>El contenido de salud no diagnostica ni trata enfermedades y no sustituye a un médico. Datos leídos de Apple Salud con tu permiso. En caso de emergencia, acude de inmediato.</p>
+<h3>6. Clima y rutas (tráfico)</h3>
+<p>Datos del clima de terceros (Open-Meteo) y rutas de Apple Maps. Son estimaciones que pueden diferir. <strong>La seguridad en tus desplazamientos es tu responsabilidad</strong>.</p>
+<h3>7. Finanzas</h3>
+<p>Solo herramientas de contabilidad, sin asesoramiento de inversión ni fiscal.</p>
+<h3>8. Suscripciones y reembolsos</h3>
+<p>Cargos cobrados por Apple, renovación automática salvo cancelación 24 h antes del fin del periodo. <strong>Los reembolsos los gestiona únicamente Apple.</strong></p>
+<h3>9. Limitación de responsabilidad</h3>
+<p>En la medida permitida por la ley, no respondemos de daños indirectos o consecuentes.</p>
+<h3>10. Cambios</h3>
+<p>Podemos actualizar estos términos; el uso continuado implica aceptación.</p>
+<h3>11. Contacto</h3>
+<p>Dudas: pigpigplans@gmail.com</p>`;
+/* URL 参数：?lang=en / ?tab=guide（App 打开隐私政策时会按当前语言带上 lang，网页直接切到该语言） */
 function param(k){var m=new RegExp("[?&]"+k+"=([^&#]*)").exec(location.search||"");return m?decodeURIComponent(m[1].replace(/\+/g," ")):null}
 // 语言码归一：zh-Hans / zh-Hans-CN / zh-CN → zh-Hans；zh-TW / zh-Hant → zh-Hant；en-US → en
 function normLang(q){
@@ -968,7 +1168,7 @@ try{
   else{var s=localStorage.getItem("ppLang");if(s&&I18N[s])cur=s}   // ② 记住上次选择
 }catch(e){}
 var tab="privacy";
-try{if(param("tab")==="guide")tab="guide"}catch(e){}
+try{var qt=param("tab");if(qt==="guide"||qt==="terms")tab=qt}catch(e){}
 // 把当前语言/页签同步进地址栏（刷新或分享时保留）
 function syncURL(){try{history.replaceState(null,"","?lang="+encodeURIComponent(cur)+(tab==="privacy"?"":"&tab="+tab))}catch(e){}}
 function el(id){return document.getElementById(id)}
@@ -976,8 +1176,8 @@ function draw(){
   document.documentElement.lang=cur;
   var d=I18N[cur]||I18N["en"];
   el("langs").innerHTML=LANGS.map(function(l){return '<button class="lang'+(l[0]===cur?" active":"")+'" data-l="'+l[0]+'">'+l[1]+'</button>'}).join("");
-  el("tabs").innerHTML='<button class="tab'+(tab==="privacy"?" active":"")+'" data-t="privacy">'+d.ui.privacy+'</button><button class="tab'+(tab==="guide"?" active":"")+'" data-t="guide">'+d.ui.guide+'</button>';
-  el("doc").innerHTML=(tab==="privacy")?d.privacy:d.guide;
+  el("tabs").innerHTML='<button class="tab'+(tab==="privacy"?" active":"")+'" data-t="privacy">'+d.ui.privacy+'</button><button class="tab'+(tab==="guide"?" active":"")+'" data-t="guide">'+d.ui.guide+'</button><button class="tab'+(tab==="terms"?" active":"")+'" data-t="terms">'+d.ui.terms+'</button>';
+  el("doc").innerHTML=(tab==="privacy")?d.privacy:(tab==="guide")?d.guide:(d.terms||I18N["en"].terms);
   if(d.contact){el("footContact").textContent=d.contact}
   Array.prototype.forEach.call(document.querySelectorAll(".lang"),function(b){b.onclick=function(){cur=b.getAttribute("data-l");try{localStorage.setItem("ppLang",cur)}catch(e){}syncURL();draw()}});
   Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(b){b.onclick=function(){tab=b.getAttribute("data-t");syncURL();draw()}});
